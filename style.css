@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.header-top nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.header-top nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.header-top nav ul li a:hover {
+    background-color: #367acd;
+    border-radius: 5px;
+}
+
+.sub-header {
+    background-color: #333;
+}
+
+.sub-header nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 5px 20px;
+}
+
+.sub-header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.sub-header nav ul li a:hover {
+    background-color: #367acd;
+    border-radius: 5px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.image-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.image-text img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-text .left-img {
+    order: 0;
+}
+
+.image-text .right-img {
+    order: 1;
+}
+
+.image-text div {
+    flex: 1;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.video-section iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+@media (max-width: 768px) {
+    .image-text {
+        flex-direction: column;
+    }
+
+    .header-top, .sub-header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+header {
+    background: linear-gradient(90deg, #222, #444);
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-text img {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-text img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.header-top nav ul li a,
+.sub-header nav ul li a {
+    position: relative;
+}
+
+.header-top nav ul li a::after,
+.sub-header nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #367acd;
+    transition: width 0.3s;
+}
+
+.header-top nav ul li a:hover::after,
+.sub-header nav ul li a:hover::after {
+    width: 100%;
+}
+
+.destaque {
+    font-weight: bold;
+    text-shadow: #e00000 1px 0 10px;
+}
+
+h2, h3, p, dt {
+    padding: 1%;
+}
+
+dd {
+    padding: 0.1% 1.5% 0.3% 1.5%;
+}
+
+dt {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h2, h3 {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+#subheader-img, #video-img, #lado-img {
+    width: 30%;
+    height: 30%;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+
+/* ================================================= */
+
+body.elementos-page {
+    background: url("imagens/backgrounds/fundo-elementos.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.elementos-page .sub-header {
+    background: linear-gradient(90deg, #333, #555);
+}
+
+body.ar-page {
+    background: url("imagens/backgrounds/fundo-ar.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.ar-page section {
+    background-color: #b2cfd6;
+}
+
+body.ar-page .sub-header {
+    background: linear-gradient(90deg, #4e6569, #80c2c3);
+}
+
+body.agua-page {
+    background: url("imagens/backgrounds/fundo-agua.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.agua-page section {
+    background-color: #93a4e1;
+}
+
+body.agua-page .sub-header {
+    background: linear-gradient(90deg, #312a54, #6181b0);
+}
+
+body.terra-page {
+    background: url("imagens/backgrounds/fundo-terra.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.terra-page section {
+    background-color: #bc9783;
+}
+
+body.terra-page .sub-header {
+    background: linear-gradient(90deg, #54382f, #80604d);
+}
+
+body.fogo-page {
+    background: url("imagens/backgrounds/fundo-fogo.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.fogo-page section {
+    background-color: #de9696;
+}
+
+body.fogo-page .sub-header {
+    background: linear-gradient(90deg, #7b3030, #cba063);
+}
+
+/* ================================================= */
+
+body.equipe-avatar-page {
+    background: url("imagens/backgrounds/fundo-equipe-avatar.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.aang-page {
+    background: url("imagens/backgrounds/fundo-aang.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.katara-page {
+    background: url("imagens/backgrounds/fundo-katara.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.sokka-page {
+    background: url("imagens/backgrounds/fundo-sokka.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.toph-page {
+    background: url("imagens/backgrounds/fundo-toph.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.zuko-page {
+    background: url("imagens/backgrounds/fundo-zuko.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.suki-page {
+    background: url("imagens/backgrounds/fundo-suki.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.coadjuvantes-page {
+    background: url("imagens/backgrounds/fundo-coadjuvantes.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ================================================= */
+
+body.mundo-espiritual-page {
+    background: url("imagens/backgrounds/fundo-mundo-espiritual.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.avatares-antigos-page {
+    background: url("imagens/backgrounds/fundo-avatares-antigos.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.os-espiritos-page {
+    background: url("imagens/backgrounds/fundo-os-espiritos.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.portais-espirituais-page {
+    background: url("imagens/backgrounds/fundo-portais-espirituais.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ================================================= */
+
+body.index-page {
+    background: url("imagens/backgrounds/fundo-index.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.korra-page {
+    background: url("imagens/backgrounds/fundo-korra.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.sobre-page {
+    background: url("imagens/backgrounds/fundo-sobre.png") no-repeat center center fixed;
+    background-size: cover;
+} 
+
+@media (max-width: 1024px) {
+    main {
+        padding: 0 10px;
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header-top nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-text img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .header-top nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header-top nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-top nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
+
+    .header-top {
+        padding: 10px;
+    }
+
+    .image-text img {
+        max-width: 100%;
+    }
+}
