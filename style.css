@@ -377,3 +377,64 @@ body.sobre-page {
     background-size: cover;
 } 
 
+@media (max-width: 1024px) {
+    main {
+        padding: 0 10px;
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header-top nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-text img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .header-top nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header-top nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-top nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
+
+    .header-top {
+        padding: 10px;
+    }
+
+    .image-text img {
+        max-width: 100%;
+    }
+}
